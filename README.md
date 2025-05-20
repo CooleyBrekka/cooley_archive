@@ -16,8 +16,16 @@ This datapack and optional resource pack are designed to streamline the process 
 Note: Files in the `public/` folder are currently a sample scripted enemy implementation. Feel free to remove or change those files.
 
 #### Creating and Deleting Actors
+
+Use this syntax to merge information about the actor into storage. TODO nograv and defaults
 ```mcfunction
-data modify storage cooley:statue root merge value {Rotation:[0.0f,0.0f],position:"0.5 -60.0 0.5",clothes:"player_head_leather_armor",hands:2,pose:"default_gravity"}
-function cooley:interface/create_statue
+data modify storage cooley:statue root merge value {Rotation:[0.0f,0.0f],position:"0.5 -60.0 0.5",clothes:"player_head_leather_armor",hands:1,pose:"default"}
 ```
-    function cooley:public/sample/populate_walking with storage cooley:statue root.new
+- clothes - the actor will run `function cooley:public/clothes/outfits/<clothes>` as itself. This function intended to be designed by the user and should contain `/item` commands that equip the actor. Do not perform calculations here since this command runs an undefined number of times (three, but that's not guaranteed.) See Misc for information on retrieving a player head.
+- hands - if using the optional resource pack, this is the type of custom hand texture the actor uses. See Misc for information on modifying the resource pack.
+- pose - the actor will run `function cooley:animation/statue/pose/<pose>` as itself. There are multiple pre-made starting poses, but additional ones may be added. Again, this command runs an undefined number of times.
+The default values for actors are shown in the command above.
+
+function cooley:interface/create_statue
+function cooley:public/sample/populate_walking with storage cooley:statue root.new
+
