@@ -1,0 +1,2 @@
+#tellraw @a "none exit"
+
