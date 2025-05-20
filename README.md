@@ -77,7 +77,7 @@ This command will add the payload to the timeline.
 function cooley:interface/add_action {storage:"cooley:sample root.payload",timeline:2}
 ```
 - storage - the location of the payload
-- timeline - the timeline to append to. limb positions applied by timelines added later will override limb positions applied by timelines that are added earlier, regardless of the timeline id.
+- timeline - the timeline to append to. limb positions applied by timelines added later will override limb positions applied by timelines that are added earlier, **regardless of the timeline id**.
 
 #### Finite State Machines
 
