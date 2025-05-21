@@ -9,11 +9,9 @@ function cooley:animation/timeline/process/get_pose with storage cooley:statue r
 
 # get the duration
 # scoreboard cheaper than storage for this
-#$data modify storage cooley:statue root.$(uuid).timeline_$(id)_object.duration set value $(time)
 $scoreboard players set $(uuid)_$(id) co_duration $(time)
 
 # scoreboard cheaper than storage for this
-#$data modify storage cooley:statue root.$(uuid).timeline_$(id)_object.current_time set value 0
 $scoreboard players set $(uuid)_$(id) co_current_time 0
 #$say reset $(uuid)_$(id)
 
