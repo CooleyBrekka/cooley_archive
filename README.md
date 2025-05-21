@@ -8,9 +8,9 @@ TODO: no grav attribute for actors, default for nograv, defaults for limb payloa
 ```diff
 - Using gu is required for this datapack to work! Get gu here: 
 ```
-https://github.com/gibbsly/gu (thanks gibbs!)
+https://github.com/gibbsly/gu
 
-This website is very handy for generating armor stand poses: https://haselkern.com/Minecraft-ArmorStand/ (thanks Lars!)
+This website is very handy for generating armor stand poses: https://haselkern.com/Minecraft-ArmorStand/
 
 ## Features
 
@@ -109,6 +109,13 @@ function cooley:interface/stop_action_uuid with storage cooley:sample root
 During the next update step, the action will exit without ticking.
 
 ## Misc
+
+## Player Heads
+
+Running `function cooley:public/clothes/player_head` with arguments `{player:<player uuid>,statue:<armor stand uuid>}` will put that player's head on the armor stand.
+
+See `cooley:public/clothes/outfits/player_head_leather_armor` for an example of how to do this.
+
 
 here:
 - player heads
