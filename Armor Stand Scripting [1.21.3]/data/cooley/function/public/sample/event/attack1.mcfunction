@@ -5,7 +5,7 @@
 ## raise arm
 # set up the payload
 data modify storage cooley:sample root.payload set value {time:8,lerp:"icbrt"}
-data modify storage cooley:sample root.payload.LeftArm set value {values:[0f,-78f,-70f],type:"absolute"}
+data modify storage cooley:sample root.payload.LeftArm set value {values:[0f,-78f,-70f]}
 
 # request an addition to the timeline
 function cooley:interface/add_action {storage:"cooley:sample root.payload",timeline:2}
@@ -13,7 +13,7 @@ function cooley:interface/add_action {storage:"cooley:sample root.payload",timel
 ## slash
 # set up the payload
 data modify storage cooley:sample root.payload set value {time:10,lerp:"cbrt"}
-data modify storage cooley:sample root.payload.LeftArm set value {values:[165f,-182f,-120f],type:"absolute"}
+data modify storage cooley:sample root.payload.LeftArm set value {values:[165f,-182f,-120f]}
 
 # request an addition to the timeline
 function cooley:interface/add_action {storage:"cooley:sample root.payload",timeline:2}
@@ -21,7 +21,7 @@ function cooley:interface/add_action {storage:"cooley:sample root.payload",timel
 ## minor recovery
 # set up the payload
 data modify storage cooley:sample root.payload set value {time:6,lerp:"icbrt"}
-data modify storage cooley:sample root.payload.LeftArm set value {values:[147f,-240f,-180f],type:"absolute"}
+data modify storage cooley:sample root.payload.LeftArm set value {values:[147f,-240f,-180f]}
 
 # request an addition to the timeline
 function cooley:interface/add_action {storage:"cooley:sample root.payload",timeline:2}

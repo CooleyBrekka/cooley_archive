@@ -31,6 +31,5 @@ function cooley:animation/statue/bind with storage cooley:statue root.new
 tag @e remove co_statue_empty
 
 # reset storage to defaults for next call
-data modify storage cooley:statue root merge value {Rotation:[0.0f,0.0f],position:"0.5 -60.0 0.5",clothes:"player_head_leather_armor",pose:"default_gravity",actor:-1}
-
+function cooley:storage/init
 

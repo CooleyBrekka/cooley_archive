@@ -1,7 +1,6 @@
 # run setup functions on the new statue
 $execute as $(marker) run function cooley:public/sample/event/walk_cycle1
 $execute as $(marker) run function cooley:public/sample/event/torso_idle
-$execute as $(marker) run function cooley:public/sample/event/walking_controller
 
 # save uuid for later
 # systems that create an arbitrary number of statues will
