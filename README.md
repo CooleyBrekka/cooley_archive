@@ -25,7 +25,7 @@ This website is very handy for generating armor stand poses: https://haselkern.c
 
 Note: Files in the `public/` folder are currently a sample scripted enemy implementation. Feel free to remove or change those files, or reference them while learning about the system. I know that this is a staggering wall of text, and I'm working on making it better.
 
-### Creating and Deleting Actors
+## Creating and Deleting Actors
 
 Use this syntax to merge information about the actor into storage. The default values for actors are shown in the command below.
 ```mcfunction
@@ -51,7 +51,7 @@ function cooley:interface/despawn_uuid with storage cooley:sample root
 ```
 Again, if you stored the UUID in `cooley:sample root.uuid`, make sure to only pass in `cooley:sample root` so that `uuid` can be a macro argument.
 
-### Keyframes and Timelines
+## Keyframes and Timelines
 
 To animate your actors, you will need to add keyframes to their timelines. This is done using storage payloads.
 Let's say we want the actor to raise their left arm (like winding up an attack).
@@ -79,7 +79,7 @@ function cooley:interface/add_action {storage:"cooley:sample root.payload",timel
 - storage - the location of the payload
 - timeline - the timeline to append to. limb positions applied by timelines added later will override limb positions applied by timelines that are added earlier, **regardless of the timeline id**.
 
-### Finite State Machines
+## Finite State Machines
 
 Every action can have a finite state machine attached to it. This makes it easy to create enemy movesets and other scripted events.
 
@@ -93,7 +93,14 @@ Every action can have a finite state machine attached to it. This makes it easy 
 
 **Important!** The entity running fsm functions is a marker at the position of the actor. If you need to modify equipment or position of the armor stands, use `function cooley:interface/as_child {command:"<command to run>"}` inside an fsm function to have each child armor stand run your desired command/function.
 
-### Misc
+## Other Interface
+
+- `function cooley:interface/clear_all` deletes all actors and erases storage
+- `function cooley:interface/resource_enable` enables hand models. Requires the optional resource pack
+- `function cooley:interface/resource_disable` disables hand models
+- `stop action`
+
+## Misc
 
 
 
