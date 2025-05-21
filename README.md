@@ -81,7 +81,17 @@ function cooley:interface/add_action {storage:"cooley:sample root.payload",timel
 
 ### Finite State Machines
 
+Every action can have a finite state machine attached to it. This makes it easy to create enemy movesets and other scripted events.
 
+- When an action starts, `function cooley:public/fsm/<fsm>/init` is run as the actor.
+- Every tick that the action is active, `function cooley:public/fsm/<fsm>/tick` is run as the actor.
+- When the action exits, `function cooley:public/fsm/<fsm>/exit` is run as the actor.
+
+- The `#fsm_tick co_math` scoreboard contains the current tick of the action, in the range [1, <time>].
+- The `#fsm_unlerped co_math` scoreboard contains the fraction of the action that has elapsed in the range [0, 10000].
+- The `#fsm_lerped co_math` scoreboard contains the fraction of the action elapsed in the range [0, 10000], but with the interpolation function applied. (Useful for measuring out exactly how far an attack swing has traveled, for example.)
+
+**Important!** The entity running fsm functions is a marker at the position of the actor. If you need to modify equipment or position of the armor stands, use `function cooley:interface/as_child {command:"<command to run>"}` inside an fsm function to have each child armor stand run your desired command/function.
 
 ### Misc
 
