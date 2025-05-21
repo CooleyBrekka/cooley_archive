@@ -60,7 +60,7 @@ This command will create the base for our payload. It contains some metadata abo
 ```mcfunction
 data modify storage cooley:sample root.payload set value {time:8,fsm:"none",lerp:"icbrt"}
 ```
-- time - how long the animation lasts. `-1` means that this action doesn't end until another action is added to the timeline after it. (For example, an idle state that eventually adds a non-idle action.) Note that actual limb animations should use positive time values and interrupt themselves if they need to exit early. `-1` by default.
+- time - how long the animation lasts. `-1` means that this action doesn't end until another action is added to the timeline after it. (For example, an idle state that eventually adds a non-idle action.) Note that actual limb animations should use positive time values and interrupt themselves if they need to exit early. See Other Interface for more information. `-1` by default.
 - fsm - the finite state machine that's attached to this animation. See Finite State Machines for information on scripting. `"none"` by default.
 - lerp - the interpolation algorithm used to smooth out the animation. See Misc for a list. `"linear"` by default.
 
@@ -98,11 +98,22 @@ Every action can have a finite state machine attached to it. This makes it easy 
 - `function cooley:interface/clear_all` deletes all actors and erases storage
 - `function cooley:interface/resource_enable` enables hand models. Requires the optional resource pack
 - `function cooley:interface/resource_disable` disables hand models
-- `stop action`
+
+Actions can be stopped early by using the following setup:
+```mcfunction
+data modify storage cooley:sample root.uuid set from <the location where you're storing your actor's uuid>
+data modify storage cooley:sample root.timeline set value <the timeline id of the action to stop>
+
+function cooley:interface/stop_action_uuid with storage cooley:sample root
+```
+During the next update step, the action will exit without ticking.
 
 ## Misc
 
-
+here:
+- player heads
+- modifying rp
+- lerps
 
 
 
