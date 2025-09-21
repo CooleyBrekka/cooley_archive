@@ -27,7 +27,7 @@ scoreboard players operation #fsm_lerped co_math = #fraction co_math
 # (`#fsm_tick co_math` contains current tick of animation)
 # (`#fsm_unlerped co_math` contains fraction of animation done from 0 to 10000)
 # (`#fsm_lerped co_math` contains fraction of distance traveled from 0 to 10000)
-$execute if score #take_action co_math matches 1 as $(uuid) run function cooley:public/fsm/$(fsm)/tick
+$execute if score #take_action co_math matches 1 as $(uuid) at @s rotated as @s run function cooley:public/fsm/$(fsm)/tick
 
 # get children
 $data modify storage cooley:statue root.temp.head set from storage cooley:statue root.$(uuid)_bind.head
@@ -51,8 +51,8 @@ $execute if score $(uuid)_$(id) co_duration matches -1 unless data storage coole
 # if duration is -2, don't exit
 $execute if score $(uuid)_$(id) co_duration matches -2 run scoreboard players set #object_exit co_math 0
 
-# run the exit function
-$execute if score #object_exit co_math matches 1 as $(uuid) run function cooley:public/fsm/$(fsm)/exit
+# run the exit function only if object still exists
+$execute if score #object_exit co_math matches 1 as $(uuid) if data storage cooley:statue root.$(uuid).timeline_$(id)_object as $(uuid) at @s rotated as @s run function cooley:public/fsm/$(fsm)/exit
 
 # delete this action
 $execute if score #object_exit co_math matches 1 run data remove storage cooley:statue root.$(uuid).timeline_$(id)_object

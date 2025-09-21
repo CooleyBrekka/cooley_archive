@@ -1,1 +1,2 @@
-$tellraw @a "message content: $(message)"
+$say message content: $(message)
+

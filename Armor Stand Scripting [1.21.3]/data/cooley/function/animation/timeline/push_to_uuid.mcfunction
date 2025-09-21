@@ -11,7 +11,6 @@ $execute if score #find_timeline co_math matches 0 run data modify storage coole
 # increment length by 1
 $execute if score #find_timeline co_math matches 0 run function cooley:storage/operation {str:"cooley:statue root.$(uuid).timelines_length",op:"+",mod:1}
 
-
 # write the temp to the entity's unique timeline array
 $data modify storage cooley:statue root.$(uuid).timeline_$(timeline_id) append from storage cooley:statue root.temp_block
 

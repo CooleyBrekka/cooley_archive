@@ -1,3 +1,5 @@
-scoreboard players set #tracker co_math 0
+# process every actor currently registered
 function cooley:animation/timeline/loop
+
+
 

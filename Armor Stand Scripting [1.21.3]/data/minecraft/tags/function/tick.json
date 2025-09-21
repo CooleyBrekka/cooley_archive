@@ -1,7 +1,5 @@
 {
-	"replace":false,
-	"values": [
-		"cooley:loop"
-	]
-
+    "values" : [
+        "cooley:loop"
+    ]
 }

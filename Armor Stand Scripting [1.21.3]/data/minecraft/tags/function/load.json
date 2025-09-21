@@ -1,6 +1,5 @@
-{ 
-	"replace":false,
-	"values": [ 
-		"cooley:load" 
-	]
+{
+    "values" : [
+        "cooley:load"
+    ]
 }

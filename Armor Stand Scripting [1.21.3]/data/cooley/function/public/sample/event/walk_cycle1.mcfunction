@@ -1,4 +1,5 @@
 ## move limbs in opposite directions
+
 # set up the payload
 data modify storage cooley:sample root.payload set value {time:15,fsm:"walk_cycle1",lerp:"cbrt"}
 data modify storage cooley:sample root.payload.LeftLeg set value {values:[-20f,0f,1f]}
@@ -14,4 +15,9 @@ data modify storage cooley:sample root.payload.RightArm set value {values:[-20f,
 
 # request an addition to the timeline
 function cooley:interface/add_action {storage:"cooley:sample root.payload",timeline:0}
+
+
+
+
+
 

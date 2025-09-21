@@ -18,4 +18,3 @@ function cooley:public/clothes/leather_armor
 
 # give wooden sword
 function cooley:public/clothes/wooden_sword
-

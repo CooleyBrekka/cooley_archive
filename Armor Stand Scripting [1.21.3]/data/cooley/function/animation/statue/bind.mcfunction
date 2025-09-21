@@ -9,3 +9,10 @@ $data modify storage cooley:statue root.statue_list append value "$(marker)"
 
 # increment length by 1
 function cooley:storage/operation {str:"cooley:statue root.statue_amt",op:"+",mod:1}
+
+# this is a garbage value otherwise
+$data modify storage cooley:statue root.$(marker).timelines_length set value 0
+
+# actor id
+$tag $(marker) add co_actor$(actor)
+

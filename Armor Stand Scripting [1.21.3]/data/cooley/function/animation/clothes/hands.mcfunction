@@ -10,6 +10,10 @@ execute if score #custom_resources co_math matches 0 run item replace entity @s 
 execute if score #custom_resources co_math matches 0 run item replace entity @s weapon.offhand with air
 
 # custom hand model
+# 1214
+#$execute if score #custom_resources co_math matches 1 run item replace entity @s weapon.mainhand with nautilus_shell[item_model="minecraft:h$(hands)"] 1
+#$execute if score #custom_resources co_math matches 1 run item replace entity @s weapon.offhand with nautilus_shell[item_model="minecraft:h$(hands)"] 1
 $execute if score #custom_resources co_math matches 1 run item replace entity @s weapon.mainhand with nautilus_shell[custom_model_data=$(hands)] 1
 $execute if score #custom_resources co_math matches 1 run item replace entity @s weapon.offhand with nautilus_shell[custom_model_data=$(hands)] 1
+
 
