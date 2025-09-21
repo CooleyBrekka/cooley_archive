@@ -1,5 +1,5 @@
 # payload of information for the armor stand
-data modify storage cooley:statue root merge value {position:"-40.5 -3.0 139.5",clothes:"player_head_leather_armor",hands:2,Rotation:[-90.0f,40.0f]}
+data modify storage cooley:statue root merge value {position:"-2.26 -60.00 0.94",clothes:"player_head_leather_armor",hands:2,Rotation:[-90.0f,40.0f]}
 # request creation of armor stand
 function cooley:interface/create_statue
 
