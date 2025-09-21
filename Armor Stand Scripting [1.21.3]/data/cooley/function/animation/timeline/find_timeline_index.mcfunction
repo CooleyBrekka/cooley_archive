@@ -9,5 +9,4 @@ function cooley:storage/strcmp {1:"cooley:statue root.temp.1",2:"cooley:statue r
 
 # if matches, set to 1
 execute if score #strcmp co_math matches 0 run scoreboard players set #find_timeline co_math 1
-#tellraw @a [{"score":{"name": "#strcmp","objective": "co_math"}}]
 

@@ -1,4 +1,5 @@
 # causes the object to resolve, instantly triggering the appropriate number of ticks and exit
+# TODO test this, i don't think it actually works
 $data modify storage cooley:statue root.$(marker).timeline_$(timeline)_object.duration set value 0
 
 # calculate loop num

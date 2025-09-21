@@ -17,5 +17,4 @@ function cooley:public/clothes/player_head with storage cooley:statue root.gener
 function cooley:public/clothes/leather_armor
 
 # give wooden sword
-function cooley:public/clothes/wooden_sword
-
+function cooley:public/clothes/iron_ingot

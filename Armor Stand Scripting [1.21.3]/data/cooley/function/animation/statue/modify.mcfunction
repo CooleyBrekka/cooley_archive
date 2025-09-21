@@ -1,5 +1,5 @@
 # data modify rotation is the cleanest way i think
-data modify entity @s Rotation set from storage cooley:statue Rotation
+data modify entity @s Rotation set from storage cooley:statue root.Rotation
 
 # add pose
 $execute at @s rotated as @s run function cooley:animation/statue/pose/$(pose)
@@ -10,8 +10,7 @@ execute as @s[tag=co_top] run function cooley:animation/clothes/top
 execute as @s[tag=co_bottom] run function cooley:animation/clothes/bottom
 $execute as @s[tag=co_hands] run function cooley:animation/clothes/hands {hands:"$(hands)"}
 
-# actor id
-$tag @s add co_actor$(actor)
+
 
 
 
