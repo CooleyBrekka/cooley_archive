@@ -1,0 +1,23 @@
+## move limbs in opposite directions
+
+# set up the payload
+data modify storage crass:sample root.payload set value {time:15,fsm:"walk_cycle1",lerp:"cbrt"}
+data modify storage crass:sample root.payload.LeftLeg set value {values:[-20f,0f,1f]}
+data modify storage crass:sample root.payload.RightLeg set value {values:[20f,0f,1f]}
+
+# request an addition to the timeline
+function crass:interface/add_action {storage:"crass:sample root.payload",timeline:1}
+
+# set up the payload
+data modify storage crass:sample root.payload set value {time:15}
+data modify storage crass:sample root.payload.LeftArm set value {values:[20f,0f,1f]}
+data modify storage crass:sample root.payload.RightArm set value {values:[-20f,0f,1f]}
+
+# request an addition to the timeline
+function crass:interface/add_action {storage:"crass:sample root.payload",timeline:0}
+
+
+
+
+
+
