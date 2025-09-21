@@ -1,10 +1,55 @@
 {
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "item/nautilus_shell"
-	},
-	"overrides": [
-		{ "predicate": { "custom_model_data": 1}, "model": "item/nautilus_shell/1" },
-		{ "predicate": { "custom_model_data": 2}, "model": "item/nautilus_shell/2" }
-	]
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/nautilus_shell/1"
+    },
+    "entries": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/1"
+        },
+        "threshold": 1
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/2"
+        },
+        "threshold": 2
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/3"
+        },
+        "threshold": 3
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/4"
+        },
+        "threshold": 4
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/5"
+        },
+        "threshold": 5
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/nautilus_shell/6"
+        },
+        "threshold": 6
+      }
+    ]
+  }
 }
