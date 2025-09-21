@@ -9,7 +9,7 @@ $data modify storage crass:storage root.forloop_array.data.data set from storage
 $execute if data storage crass:storage root.forloop_array.data.data run $(cmd) with storage crass:storage root.forloop_array.data
 
 
-# allows nested for loops be rewriting the data
+# allows nested for loops rewriting the data
 data modify storage crass:storage root.forloop_array.data set value {}
 $data modify storage crass:storage root.forloop_array.data.data set from storage $(str) $(path)[0]
 
