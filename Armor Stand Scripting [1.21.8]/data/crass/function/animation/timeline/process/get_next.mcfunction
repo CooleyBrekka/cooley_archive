@@ -15,7 +15,7 @@ $scoreboard players set $(uuid)_$(id) co_duration $(time)
 $scoreboard players set $(uuid)_$(id) co_current_time 0
 
 # run the fsm init for this operation
-$execute as $(uuid) at @s rotated as @s run function crass:public/fsm/$(fsm)/init
+$execute as $(uuid) at @s rotated as @s run function crass:interface/fsm_packs {fsm:"$(fsm)",fn:"init"}
 
 
 

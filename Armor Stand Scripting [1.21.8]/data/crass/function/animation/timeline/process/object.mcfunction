@@ -27,7 +27,7 @@ scoreboard players operation #fsm_lerped co_math = #fraction co_math
 # (`#fsm_tick co_math` contains current tick of animation)
 # (`#fsm_unlerped co_math` contains fraction of animation done from 0 to 10000)
 # (`#fsm_lerped co_math` contains fraction of distance traveled from 0 to 10000)
-$execute if score #take_action co_math matches 1 as $(uuid) at @s rotated as @s run function crass:public/fsm/$(fsm)/tick
+$execute if score #take_action co_math matches 1 as $(uuid) at @s rotated as @s run function crass:interface/fsm_packs {fsm:"$(fsm)",fn:"tick"}
 
 # get children
 $data modify storage crass:statue root.temp.head set from storage crass:statue root.$(uuid)_bind.head
@@ -52,7 +52,7 @@ $execute if score $(uuid)_$(id) co_duration matches -1 unless data storage crass
 $execute if score $(uuid)_$(id) co_duration matches -2 run scoreboard players set #object_exit co_math 0
 
 # run the exit function only if object still exists
-$execute if score #object_exit co_math matches 1 as $(uuid) if data storage crass:statue root.$(uuid).timeline_$(id)_object as $(uuid) at @s rotated as @s run function crass:public/fsm/$(fsm)/exit
+$execute if score #object_exit co_math matches 1 as $(uuid) if data storage crass:statue root.$(uuid).timeline_$(id)_object as $(uuid) at @s rotated as @s run function crass:interface/fsm_packs {fsm:"$(fsm)",fn:"exit"}
 
 # delete this action
 $execute if score #object_exit co_math matches 1 run data remove storage crass:statue root.$(uuid).timeline_$(id)_object
