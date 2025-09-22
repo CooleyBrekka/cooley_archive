@@ -6,7 +6,6 @@ data modify storage crass:statue root.temp merge value {iter:0,command:"function
 function crass:storage/forloop with storage crass:statue root.temp
 
 $execute if score #find_timeline co_math matches 0 run data modify storage crass:statue root.$(uuid).timelines append value "$(timeline_id)"
-#$execute if score #find_timeline co_math matches 0 run say data modify storage crass:statue root.$(uuid).timelines append value "$(timeline_id)"
 
 # increment length by 1
 $execute if score #find_timeline co_math matches 0 run function crass:storage/operation {str:"crass:statue root.$(uuid).timelines_length",op:"+",mod:1}

@@ -5,14 +5,14 @@
 ## raise arm
 # set up the payload
 data modify storage crass:sample root.payload set value {time:6,lerp:"icbrt"}
-data modify storage crass:sample root.payload.LeftArm set value {values:[0f,-78f,-70f]}
+data modify storage crass:sample root.payload.LeftArm set value {values:[0f,282f,290f]}
 # request an addition to the timeline
 function crass:interface/add_action {storage:"crass:sample root.payload",timeline:2}
 
 ## slash
 # set up the payload
 data modify storage crass:sample root.payload set value {time:8,lerp:"cbrt"}
-data modify storage crass:sample root.payload.LeftArm set value {values:[165f,-182f,-120f]}
+data modify storage crass:sample root.payload.LeftArm set value {values:[165f,178f,240f]}
 # request an addition to the timeline
 function crass:interface/add_action {storage:"crass:sample root.payload",timeline:2}
 
@@ -20,7 +20,7 @@ function crass:interface/add_action {storage:"crass:sample root.payload",timelin
 ## minor recovery
 # set up the payload
 data modify storage crass:sample root.payload set value {time:6,lerp:"icbrt",fsm:"slash"}
-data modify storage crass:sample root.payload.LeftArm set value {values:[147f,-240f,-180f]}
+data modify storage crass:sample root.payload.LeftArm set value {values:[147f,120f,180f]}
 # request an addition to the timeline
 function crass:interface/add_action {storage:"crass:sample root.payload",timeline:2}
 

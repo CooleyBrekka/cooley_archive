@@ -9,5 +9,3 @@ $function crass:animation/timeline/process/get_limb {limb:"LeftLeg",uuid:"$(uuid
 $function crass:animation/timeline/process/get_limb {limb:"RightArm",uuid:"$(uuid)",id:"$(id)"}
 $function crass:animation/timeline/process/get_limb {limb:"LeftArm",uuid:"$(uuid)",id:"$(id)"}
 
-
-

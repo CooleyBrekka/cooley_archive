@@ -13,10 +13,9 @@ $scoreboard players set $(uuid)_$(id) co_duration $(time)
 
 # scoreboard cheaper than storage for this
 $scoreboard players set $(uuid)_$(id) co_current_time 0
-#$say reset $(uuid)_$(id)
 
 # run the fsm init for this operation
 $execute as $(uuid) at @s rotated as @s run function crass:public/fsm/$(fsm)/init
 
-#$say $(uuid) $(fsm) $(time) $(lerp)
+
 
