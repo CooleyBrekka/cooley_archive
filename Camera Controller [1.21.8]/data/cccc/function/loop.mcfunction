@@ -1,3 +1,6 @@
-execute as @a run function cccc:input/loop
+difficulty normal
+
+execute as @a run function cccc:a
+
 
 
