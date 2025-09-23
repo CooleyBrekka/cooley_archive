@@ -2,6 +2,6 @@
 function gu:generate
 function cccc:topdown/exit_player_actor with storage gu:main
 
-gamemode adventure
+gamemode creative
 tag @s remove co_topdown_mode
 
