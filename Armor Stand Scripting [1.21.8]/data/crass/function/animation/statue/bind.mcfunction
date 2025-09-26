@@ -8,7 +8,7 @@ $data modify storage crass:statue root.$(marker)_bind.hands set value "$(hands)"
 $data modify storage crass:statue root.statue_list append value "$(marker)"
 
 # increment length by 1
-function crass:storage/operation {str:"crass:statue root.statue_amt",op:"+",mod:1}
+function coco:storage/operation {str:"crass:statue root.statue_amt",op:"+",mod:1}
 
 # this is a garbage value otherwise
 $data modify storage crass:statue root.$(marker).timelines_length set value 0

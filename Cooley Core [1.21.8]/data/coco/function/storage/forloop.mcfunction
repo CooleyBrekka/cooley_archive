@@ -17,10 +17,10 @@ $scoreboard players set #max_iteration co_math $(max_iter)
 scoreboard players add #current_iteration co_math 1
 
 # set up next iteration
-execute store result storage crass:storage root.forloop.iter int 1 run scoreboard players get #current_iteration co_math
-execute store result storage crass:storage root.forloop.max_iter int 1 run scoreboard players get #max_iteration co_math
-$data modify storage crass:storage root.forloop.command set value "$(command)"
-$data modify storage crass:storage root.forloop.current set value "$(current)"
+execute store result storage coco:storage root.forloop.iter int 1 run scoreboard players get #current_iteration co_math
+execute store result storage coco:storage root.forloop.max_iter int 1 run scoreboard players get #max_iteration co_math
+$data modify storage coco:storage root.forloop.command set value "$(command)"
+$data modify storage coco:storage root.forloop.current set value "$(current)"
 
-execute if score #current_iteration co_math < #max_iteration co_math run function crass:storage/forloop with storage crass:storage root.forloop
+execute if score #current_iteration co_math < #max_iteration co_math run function coco:storage/forloop with storage coco:storage root.forloop
 

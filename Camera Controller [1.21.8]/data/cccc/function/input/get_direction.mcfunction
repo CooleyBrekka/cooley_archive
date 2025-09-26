@@ -1,0 +1,22 @@
+# remap for convenience
+scoreboard players operation @s co_f = @s co_forward_input
+scoreboard players operation @s co_b = @s co_backward_input
+scoreboard players operation @s co_l = @s co_left_input
+scoreboard players operation @s co_r = @s co_right_input
+
+# character rotation
+execute if score @s co_f matches 1 if score @s co_b matches 0 if score @s co_l matches 0 if score @s co_r matches 0 run scoreboard players set @s co_actor_rotation 0
+execute if score @s co_f matches 1 if score @s co_b matches 0 if score @s co_l matches 0 if score @s co_r matches 1 run scoreboard players set @s co_actor_rotation 45
+execute if score @s co_f matches 0 if score @s co_b matches 0 if score @s co_l matches 0 if score @s co_r matches 1 run scoreboard players set @s co_actor_rotation 90
+
+execute if score @s co_b matches 1 if score @s co_l matches 0 if score @s co_r matches 1 run scoreboard players set @s co_actor_rotation 135
+execute if score @s co_b matches 1 if score @s co_l matches 0 if score @s co_r matches 0 run scoreboard players set @s co_actor_rotation 180
+execute if score @s co_b matches 1 if score @s co_l matches 1 run scoreboard players set @s co_actor_rotation 225
+
+execute if score @s co_f matches 0 if score @s co_b matches 0 if score @s co_l matches 1 run scoreboard players set @s co_actor_rotation 270
+execute if score @s co_f matches 1 if score @s co_b matches 0 if score @s co_l matches 1 run scoreboard players set @s co_actor_rotation 315
+
+# write to storage and apply to child armor stands
+execute store result storage cccc:actor root.actor_final_rotation float 1 run scoreboard players get @s co_actor_rotation 
+$execute as $(actor_temp) run function crass:interface/as_child {command:"function cccc:input/actor_rotate with storage cccc:actor root"}
+

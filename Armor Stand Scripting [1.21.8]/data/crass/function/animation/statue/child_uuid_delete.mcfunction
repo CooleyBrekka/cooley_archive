@@ -16,7 +16,7 @@ $data remove storage crass:statue root.$(math1)
 ## remove uuid from list
 # decrement number of uuids in storage
 data remove storage crass:statue root.temp.statue_list
-function crass:storage/operation {str:"crass:statue root.statue_amt",op:"-",mod:1}
+function coco:storage/operation {str:"crass:statue root.statue_amt",op:"-",mod:1}
 # recursive function, don't put singular stuff in here
 $function crass:animation/statue/list_remove {uuid:"$(math1)"}
 # dump the temp array back into the uuid storage container

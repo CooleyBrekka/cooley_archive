@@ -1,7 +1,7 @@
 # grab the next object in the timeline
 $data modify storage crass:statue root.$(uuid).timeline_$(id)_object set from storage crass:statue root.$(uuid).timeline_$(id)[0]
 $data remove storage crass:statue root.$(uuid).timeline_$(id)[0]
-$function crass:storage/operation {str:"crass:statue root.$(uuid).timeline_$(id)_length",op:"-",mod:1}
+$function coco:storage/operation {str:"crass:statue root.$(uuid).timeline_$(id)_length",op:"-",mod:1}
 
 # store current pose and new pose
 $data modify storage crass:statue root.temp.head_uuid set from storage crass:statue root.$(uuid)_bind.head
