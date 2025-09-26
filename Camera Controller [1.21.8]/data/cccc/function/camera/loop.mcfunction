@@ -1,10 +1,17 @@
-# cap to only one actor per player
+# cap to only one camera per player
 function gu:generate
 function cccc:camera/check_player_camera with storage gu:main
 
-# topdown mode handle
-function gu:generate
-execute as @s[tag=co_topdown_mode] run function cccc:camera/get_camera with storage gu:main
-execute as @s[tag=co_topdown_mode] run function cccc:camera/spectate_camera with storage cccc:camera root
+# if processing active keyframe
+$execute if data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/process_keyframe
 
+# if no active keyframe or it just ended
+$execute unless data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/get_next_keyframe
+
+# if no keyframe was added and we're in topdown mode, go back to doing whatever
+$execute unless data storage cccc:camera root.timelines.$(out).active_keyframe as @s[tag=co_topdown_mode] run function cccc:camera/topdown_camera
+
+# attach player to camera if it's animating or if we're in topdown mode
+$execute if data storage cccc:camera root.timelines.$(out).active_keyframe run spectate $(camera_temp) @s
+$execute as @s[tag=co_topdown_mode] run spectate $(camera_temp) @s
 
