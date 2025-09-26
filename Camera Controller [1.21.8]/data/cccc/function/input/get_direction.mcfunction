@@ -20,3 +20,5 @@ execute if score @s co_f matches 1 if score @s co_b matches 0 if score @s co_l m
 execute store result storage cccc:actor root.actor_final_rotation float 1 run scoreboard players get @s co_actor_rotation 
 $execute as $(actor_temp) run function crass:interface/as_child {command:"function cccc:input/actor_rotate with storage cccc:actor root"}
 
+data modify storage cccc:camera root.actor_final_rotation set from storage cccc:actor root.actor_final_rotation
+
