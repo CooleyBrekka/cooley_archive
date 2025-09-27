@@ -13,6 +13,7 @@ execute unless data storage cccc:keyframe root.current.rot run data modify stora
 execute unless data storage cccc:keyframe root.current.duration run data modify storage cccc:keyframe root.current.pos set value 20
 execute unless data storage cccc:keyframe root.current.timer run data modify storage cccc:keyframe root.current.timer set value 0
 
+# push to player uuid
 function gu:generate
 function cccc:camera/timeline/add_to_player with storage gu:main
 
