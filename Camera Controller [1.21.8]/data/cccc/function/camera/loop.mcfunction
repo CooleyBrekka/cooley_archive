@@ -6,7 +6,7 @@ function cccc:camera/check_player_camera with storage gu:main
 $execute if data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/process_keyframe with storage gu:main
 
 # if no active keyframe or it just ended
-$execute unless data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/get_next_keyframe
+$execute unless data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/get_next_keyframe with storage gu:main
 
 # attach player to camera if it's animating
 $execute if data storage cccc:camera root.timelines.$(out).active_keyframe run spectate $(camera_temp) @s
