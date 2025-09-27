@@ -8,10 +8,6 @@ $execute if data storage cccc:camera root.timelines.$(out).active_keyframe run f
 # if no active keyframe or it just ended
 $execute unless data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/get_next_keyframe
 
-# if no keyframe was added and we're in topdown mode, go back to doing whatever
-$execute unless data storage cccc:camera root.timelines.$(out).active_keyframe as @s[tag=co_topdown_mode] run function cccc:camera/topdown_camera
-
-# attach player to camera if it's animating or if we're in topdown mode
+# attach player to camera if it's animating
 $execute if data storage cccc:camera root.timelines.$(out).active_keyframe run spectate $(camera_temp) @s
-$execute as @s[tag=co_topdown_mode] run spectate $(camera_temp) @s
 
