@@ -12,6 +12,7 @@ execute unless data storage cccc:keyframe root.current.pos run data modify stora
 execute unless data storage cccc:keyframe root.current.rot run data modify storage cccc:keyframe root.current.rot set value "0, 0"
 execute unless data storage cccc:keyframe root.current.duration run data modify storage cccc:keyframe root.current.pos set value 20
 execute unless data storage cccc:keyframe root.current.timer run data modify storage cccc:keyframe root.current.timer set value 0
+execute unless data storage cccc:keyframe root.current.fsm run data modify storage cccc:keyframe root.current.fsm set value "none"
 
 # push to player uuid
 function gu:generate

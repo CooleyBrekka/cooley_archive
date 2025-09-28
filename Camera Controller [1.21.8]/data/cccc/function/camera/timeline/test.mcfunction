@@ -1,6 +1,6 @@
-data modify storage cccc:keyframe new set value {transition:"lerp",pos:"11.4 -55 7.1",rot:"-94, 53",duration:100}
+data modify storage cccc:keyframe new set value {fsm:"test",transition:"lerp",pos:"11.4 -55 7.1",rot:"-94, 53",duration:40}
 function cccc:camera/timeline/push_keyframe
 
-data modify storage cccc:keyframe new set value {transition:"lerp",pos:"1 -58 5",rot:"-143, 34",duration:160}
+data modify storage cccc:keyframe new set value {transition:"lerp",pos:"1 -58 5",rot:"-143, 34",duration:20}
 function cccc:camera/timeline/push_keyframe
 
