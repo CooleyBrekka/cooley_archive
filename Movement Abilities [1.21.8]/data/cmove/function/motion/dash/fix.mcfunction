@@ -15,5 +15,5 @@ scoreboard players set $strength player_motion.api.launch 6500
 execute at @s rotated as @s rotated ~ 0 run function player_motion:api/launch_looking
 
 # fix bad dashes
-say attempting dash fix
+#say attempting dash fix
 

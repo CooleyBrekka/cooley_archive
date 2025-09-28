@@ -1,1 +1,1 @@
-gamemode creative @s
+#gamemode creative @s

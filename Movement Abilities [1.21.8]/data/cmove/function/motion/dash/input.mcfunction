@@ -1,3 +1,3 @@
-execute if score #dash_charge co_math matches ..0 run function cooley:motion/dash/fail
-execute if score #dash_charge co_math matches 1.. run function cooley:motion/dash/success
+execute if score @s co_dash_charge matches ..0 run function cmove:motion/dash/fail
+execute if score @s co_dash_charge matches 1.. run function cmove:motion/dash/success
 

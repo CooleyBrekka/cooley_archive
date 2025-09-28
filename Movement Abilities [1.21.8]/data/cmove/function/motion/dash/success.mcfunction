@@ -16,11 +16,9 @@ execute at @s rotated as @s rotated ~ 0 run function player_motion:api/launch_lo
 
 # effects
 execute at @s run particle cloud ~ ~ ~ 0.2 0.1 0.2 0 10
-scoreboard players remove #dash_charge co_math 1
+scoreboard players remove @s co_dash_charge 1
 
 # sfx
 execute at @s run playsound minecraft:entity.breeze.land player @s ~ ~ ~ 3 1.2
 
 execute at @s run summon marker ~ ~ ~ {Tags:["dash_fixer"]}
-
-scoreboard players set #evelyns_badge_loop co_math 40
