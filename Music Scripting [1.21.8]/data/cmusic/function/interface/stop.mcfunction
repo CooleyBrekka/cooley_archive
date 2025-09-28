@@ -1,0 +1,2 @@
+function cmusic:music/stop
+

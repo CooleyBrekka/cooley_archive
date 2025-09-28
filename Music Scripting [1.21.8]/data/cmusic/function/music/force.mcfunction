@@ -1,1 +1,1 @@
-$function cooley:music/play {music:"$(music)"}
+$function cmusic:music/play {music:"$(music)"}

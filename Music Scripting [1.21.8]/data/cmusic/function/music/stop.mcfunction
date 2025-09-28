@@ -1,3 +1,3 @@
-function cooley:music/end
-function cooley:music/dump
+function cmusic:music/end
+function cmusic:music/dump
 

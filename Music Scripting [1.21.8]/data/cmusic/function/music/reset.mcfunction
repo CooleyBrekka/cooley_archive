@@ -1,3 +1,3 @@
-function cooley:music/stop
-data remove storage cooley:temp music
+function cmusic:music/stop
+data remove storage cmusic:temp music
 
