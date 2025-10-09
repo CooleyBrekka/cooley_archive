@@ -2,7 +2,8 @@
 execute if predicate cmove:on_ground run function cmove:motion/grounded
 
 # calculate custom velocity
-function cmove:motion/velocity/calc
+function gu:generate
+function cmove:motion/velocity/calc with storage gu:main
 
 # dash fix
 execute as @n[tag=dash_fixer] at @s if entity @p[distance=..0.25] as @p at @s run function cmove:motion/dash/fix

@@ -30,8 +30,6 @@ summon marker 8 1000 8 {UUID:[I;200134,0,0,7]}
 function crass:storage/init
 
 # check for gu
-data remove storage gu:main hex_chars
-function gu:zzz/load
 execute unless data storage gu:main hex_chars run tellraw @a [{"text":"gu not installed! Armor Stand Scripting will not function!","color":"#D03030"}]
 
 # check for coco

@@ -12,3 +12,6 @@ execute if score #coco_loaded co_math matches 0 run tellraw @a [{"text":"coco no
 # check for player motion
 execute unless data storage player_motion:trig arr run tellraw @a [{"text":"Player Motion not installed! Movement Abilities will not function!","color":"#D03030"}]
 
+# check for gu
+execute unless data storage gu:main hex_chars run tellraw @a [{"text":"gu not installed! Movement Abilities will not function!","color":"#D03030"}]
+
