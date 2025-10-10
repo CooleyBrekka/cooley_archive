@@ -3,12 +3,8 @@ $function coco:storage/operation {str:"cccc:camera root.timelines.$(out).active_
 $execute store result score #cccc_keyframe_timer co_math run data get storage cccc:camera root.timelines.$(out).active_keyframe.timer
 $execute store result score #cccc_keyframe_duration co_math run data get storage cccc:camera root.timelines.$(out).active_keyframe.duration
 
-### lerp pos and rotation
-$function cccc:camera/timeline/process_lerp {out:"$(out)",axis:"x"}
-$function cccc:camera/timeline/process_lerp {out:"$(out)",axis:"y"}
-$function cccc:camera/timeline/process_lerp {out:"$(out)",axis:"z"}
-$function cccc:camera/timeline/process_lerp {out:"$(out)",axis:"pitch"}
-$function cccc:camera/timeline/process_lerp {out:"$(out)",axis:"yaw"}
+# choose type of camera control
+$function cccc:camera/type/choose_type with storage cccc:camera root.timelines.$(out).active_keyframe
 
 # feed the final values into the teleport function (not doing this with any kind of smooth motion)
 $data modify storage cccc:camera root.timelines.$(out).active_keyframe.camera_temp set from storage cccc:camera root.$(out).skeleton
