@@ -1,0 +1,13 @@
+{
+	"music.echo": {
+		"sounds": [
+			{"name":"music/echo","stream":true}
+		]
+	},
+	"music.hats": {
+		"sounds": [
+			{"name":"music/hats","stream":true}
+		]
+	}
+}
+	
