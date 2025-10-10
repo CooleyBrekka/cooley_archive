@@ -24,3 +24,4 @@ $data modify storage coco:storage root.forloop.current set value "$(current)"
 
 execute if score #current_iteration co_math < #max_iteration co_math run function coco:storage/forloop with storage coco:storage root.forloop
 
+# can you make it say cocoloco? - KVT

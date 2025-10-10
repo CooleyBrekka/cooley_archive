@@ -1,3 +1,6 @@
+# get player gamemode
+$function cccc:camera/timeline/save_gamemode {out:"$(out)"}
+
 # run exit
 $function cccc:camera/timeline/fsm_exit with storage cccc:camera root.timelines.$(out).active_keyframe
 

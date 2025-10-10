@@ -9,7 +9,7 @@ execute unless data storage cooley:text root.currline if data storage cooley:tex
 # if there's a line to show, display actionbar
 execute if data storage cooley:text root.currline run function barlog:world/text/actionbar
 # hide actionbar
-execute if score @s barlog_timer matches 2 unless data storage cooley:text root.currline run title @a actionbar ""
+execute if score @s barlog_timer matches 2 unless data storage cooley:text root.currline run title @s actionbar ""
 scoreboard players add @s barlog_timer 1
 
 # check collider triggers

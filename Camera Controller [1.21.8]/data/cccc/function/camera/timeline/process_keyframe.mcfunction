@@ -15,6 +15,7 @@ $data modify storage cccc:camera root.timelines.$(out).active_keyframe.camera_te
 $function cccc:camera/timeline/move_camera with storage cccc:camera root.timelines.$(out).active_keyframe
 
 # if duration has passed, get the next keyframe (erased if none)
+$execute if score #cccc_keyframe_timer co_math >= #cccc_keyframe_duration co_math run function cccc:camera/timeline/restore_gamemode with storage cccc:camera root.timelines.$(out)
 execute if score #cccc_keyframe_timer co_math >= #cccc_keyframe_duration co_math run function cccc:camera/timeline/get_next_keyframe with storage gu:main
 
 $function cccc:camera/timeline/fsm_tick with storage cccc:camera root.timelines.$(out).active_keyframe
