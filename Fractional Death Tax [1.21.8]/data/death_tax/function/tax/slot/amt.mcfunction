@@ -38,6 +38,10 @@ scoreboard players operation #tax_penalty co_math /= #tax_denominator co_math
 
 scoreboard players operation #item_amt co_math -= #tax_penalty co_math
 
+# if tax fraction is 100%, set the count to 0 and durability flag off
+execute if score #tax_denominator co_math <= #tax_numerator co_math run scoreboard players set #item_amt co_math 0
+execute if score #tax_denominator co_math <= #tax_numerator co_math run scoreboard players set #durability co_math 0
+
 # convert durability remaining into damage
 execute if score #durability co_math matches 1.. run scoreboard players operation #item_amt co_math *= -1 co_math
 execute if score #durability co_math matches 1.. run scoreboard players operation #item_amt co_math += #durability co_math
