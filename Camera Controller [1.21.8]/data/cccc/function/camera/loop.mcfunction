@@ -1,7 +1,3 @@
-# cap to only one camera per player
-function gu:generate
-function cccc:camera/check_player_camera with storage gu:main
-
 # if processing active keyframe
 $execute if data storage cccc:camera root.timelines.$(out).active_keyframe run function cccc:camera/timeline/process_keyframe with storage gu:main
 
