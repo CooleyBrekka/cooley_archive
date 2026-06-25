@@ -19,42 +19,49 @@ execute unless score #durability co_math matches 1.. if data storage death_tax:s
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:wooden_pickaxe"} run scoreboard players set #durability co_math 59
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:wooden_shovel"} run scoreboard players set #durability co_math 59
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:wooden_hoe"} run scoreboard players set #durability co_math 59
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:wooden_spear"} run scoreboard players set #durability co_math 59
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_sword"} run scoreboard players set #durability co_math 131
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_axe"} run scoreboard players set #durability co_math 131
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_pickaxe"} run scoreboard players set #durability co_math 131
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_shovel"} run scoreboard players set #durability co_math 131
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_hoe"} run scoreboard players set #durability co_math 131
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:stone_spear"} run scoreboard players set #durability co_math 131
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_sword"} run scoreboard players set #durability co_math 32
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_axe"} run scoreboard players set #durability co_math 32
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_pickaxe"} run scoreboard players set #durability co_math 32
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_shovel"} run scoreboard players set #durability co_math 32
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_hoe"} run scoreboard players set #durability co_math 32
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:golden_spear"} run scoreboard players set #durability co_math 32
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_sword"} run scoreboard players set #durability co_math 250
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_axe"} run scoreboard players set #durability co_math 250
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_pickaxe"} run scoreboard players set #durability co_math 250
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_shovel"} run scoreboard players set #durability co_math 250
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_hoe"} run scoreboard players set #durability co_math 250
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:iron_spear"} run scoreboard players set #durability co_math 250
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_sword"} run scoreboard players set #durability co_math 1561
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_axe"} run scoreboard players set #durability co_math 1561
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_pickaxe"} run scoreboard players set #durability co_math 1561
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_shovel"} run scoreboard players set #durability co_math 1561
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_hoe"} run scoreboard players set #durability co_math 1561
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:diamond_spear"} run scoreboard players set #durability co_math 1561
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_sword"} run scoreboard players set #durability co_math 2031
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_axe"} run scoreboard players set #durability co_math 2031
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_pickaxe"} run scoreboard players set #durability co_math 2031
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_shovel"} run scoreboard players set #durability co_math 2031
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_hoe"} run scoreboard players set #durability co_math 2031
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:netherite_spear"} run scoreboard players set #durability co_math 2031
 
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_sword"} run scoreboard players set #durability co_math 190
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_axe"} run scoreboard players set #durability co_math 190
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_pickaxe"} run scoreboard players set #durability co_math 190
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_shovel"} run scoreboard players set #durability co_math 190
 execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_hoe"} run scoreboard players set #durability co_math 190
+execute unless score #durability co_math matches 1.. if data storage death_tax:storage root.get_durability{id:"minecraft:copper_spear"} run scoreboard players set #durability co_math 190
 
 
 # armor
